@@ -70,4 +70,4 @@ jobs:
         if: always()
         with:
           name: Coverage results
-          path: ${{ steps.ganmeci.outputs.coveragePath }}
+          path: ${{ steps.gameci.outputs.coveragePath }}
