@@ -47,10 +47,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: Library
-          key: Library-${{ matrix.projectPath }}
-          restore-keys: Library-
-
-      - run: mv Assets/_ModularAvatar 'Test~' 
+          key: Library
+          restore-keys: Library
 
       - uses: game-ci/unity-test-runner@v2
         id: gameci
@@ -60,7 +58,7 @@ jobs:
           testMode: EditMode
           githubToken: ${{ github.token }}
           coverageOptions: generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+nadena.dev.*
-          customParameters: -nographics -assemblyNames nadena.dev.modular-avatar
+          customParameters: -nographics -assemblyNames Tests
 
       - uses: actions/upload-artifact@v3
         if: always()
