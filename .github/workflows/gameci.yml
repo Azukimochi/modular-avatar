@@ -50,6 +50,8 @@ jobs:
           key: Library-${{ matrix.projectPath }}
           restore-keys: Library-
 
+      - run: mv Assets/_ModularAvatar 'Test~' 
+
       - uses: game-ci/unity-test-runner@v2
         id: gameci
         env:
