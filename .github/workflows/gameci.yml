@@ -37,11 +37,11 @@ jobs:
       checks: write
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: project-for-test
-      - uses: actions/checkout@v3
-        with:
-          path: Packages/nadena.dev.modular-avatar
+#        with:
+#          ref: project-for-test
+#      - uses: actions/checkout@v3
+#        with:
+#          path: Packages/nadena.dev.modular-avatar
       - uses: anatawa12/sh-actions/resolve-vpm-packages@master
 
       - uses: actions/cache@v3
